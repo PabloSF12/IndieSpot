@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="Sources/icono.ico">
+</head>
+<link rel="stylesheet" href="style-login.css">
+<body>
+    <div class="main">
+     <!--ENCABEZADO-->
+     <header>
+        <div class="encabezado-general">
+            <div>
+                <a class="logo" href="index.html">
+                    <img class="imagen-logo" src="Sources/logo_is.png" alt="logo_prinicipal">
+                </a>
+            </div>
+                <ul class="lista">
+                    <li><a href="index.html" class="links">Inicio</a></li>
+                    <li><a href="spiderman.html" class="links">Ultimo lanzamiento</a></li>
+                    <li><a href="login.html" class="links">Perfil</a></li>
+                </ul>
+            <div class="menu">
+                <img src="Sources/menu.png" alt="menu" class="menu-logo">
+            </div>
+
+            <div class="menu-hamburguesa">
+                <li><a href="index.html" class="links">Inicio</a></li>
+                <li><a href="spiderman.html" class="links">Ultimo lanzamiento</a></li>
+                <li><a href="login.html" class="links">Perfil</a></li>
+            </div>
+        </div>
+    </header>
+
+    <!--CUERPO DE PAGINA-->
+
+        <div class="general">
+            <div class="cuerpo-acceder">
+                <h1>Acceder</h1>
+                <form class="form" id="form">
+                    <div>
+                        <input type="email" name="Dirección de email o usuario" required>
+                        <p>Dirección de email</p>
+                    </div>
+                    <div>
+                        <input id="contraseña" type="password" name="Contraseña" required>
+                        <p>Contraseña</p>
+                    </div>
+                    <div>
+                        <input id="captchaUser" type="number" name="captchaUser" required>
+                        <p>Captcha</p>
+                    </div>
+                    <input type="text" name="captcha" id="captcha" disabled>
+                    <div class="iniciar-sesion">
+                        <input type="submit" name="Iniciar sesión" id="submit-sesion" value="Iniciar sesión">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="correcto" class="mensaje correcto">
+            Has iniciado sesión correctamente.
+        </div>
+
+        <div id="incorrecto" class="mensaje incorrecto">
+            Los datos ingresados son incorrectos.
+        </div>
+    </div>
+
+    <!--FOOTER-->
+        
+    <div>
+        <footer>
+            <section>
+                <h2>Navegación</h2>
+                <ul>
+                    <a href="index.html" class="links"><li>Inicio</li></a>
+                    <a href="spiderman.html" class="links"><li>¡Nuevo lanzamiento!</li></a>
+                    <a href="login.html" class="links"><li>Perfil</li></a>
+                </ul>
+            </section>
+            <section>
+                <h2>Mas recomendaciones</h2>
+                <ul>
+                    <a href="https://www.3djuegos.com" class="links"><li>3Djuegos</li></a>
+                    <a href="https://vandal.elespanol.com" class="links"><li>Vandal</li></a>
+                    <a href="https://www.metacritic.com" class="links"><li>Metacritic</li></a>
+                    <a href="https://www.vidaextra.com" class="links"><li>Vida Extra</li></a>
+                </ul>
+            </section>
+            <section>
+                <h2>Cuenta</h2>
+                <ul>
+                    <a href="login.html" class="links"><li>Iniciar sesión</li></a>
+                        <li>Configuración</li>
+                        <li>Desconectar</li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+    <script src="JavaScript/menu.js"></script>
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-image: url(Sources/imagen-fondo.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    padding: 1rem;
+}
+
+
+/*Encabezado*/
+.encabezado-general {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+
+}
+
+.lista{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+li {
+    list-style: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-logo {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 65px;
+}
+/*Menu hamburguesa*/
+
+.menu-hamburguesa {
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    scale: 1 0;
+    transform-origin: top;
+    width: 300px;
+    backdrop-filter: blur(40px);
+    background-color: rgba(0, 0, 0, 0.423);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    transition: scale 0.2s ease-in;  
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.339);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.menu-hamburguesa.open {
+    scale: 1; 
+    transition: scale 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-hamburguesa li {
+    display: flex;
+    padding: 0.7rem;
+}
+.panel-general {
+    gap: 3rem;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.338);
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+    padding: 2rem;
+}
+/*Menu responsive*/
+@media(max-width: 992px) {
+    .encabezado-general .lista,
+    .encabezado-general .action-btn {
+        display: none;
+    }
+    .panel-general {
+        padding: 0rem;
+    }
+
+    .encabezado-general .menu {
+        display: block;
+    }
+}
+
+@media(max-width: 576px) {
+    .menu-hamburguesa {
+        left: 10rem;
+        width: unset;
+    }
+}
+
+/*Barra de busqueda*/
+
+.busqueda {
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.338);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.barra-busqueda {
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.152);
+    text-align: center;
+    color: white;
+    height: 30px;
+    width: 600px;
+    border-radius: 10px;
+    border: none;
+}
+
+/*Contenidos*/
+
+.cuerpo-pagina {
+    display: flex;
+}
+
+/*JUEGO*/
+
+.panel-doble {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    flex-wrap: wrap;
+
+}
+.metacritic {
+    width: 10rem;
+    padding-top: 2rem;
+    padding: 2.1rem;
+
+    text-align: center;
+}
+
+.tabla-principal {
+    text-align: center;
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.338);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabla {
+    flex-grow: 2;
+    border-collapse: collapse;
+    width: 100%;
+    
+    font-size: 2rem;
+}
+
+.tabla td, .tabla th{
+    border: 2px solid rgb(156, 27, 128);
+    padding: 8px;
+}
+
+.panel-info {
+    display: flex;
+    gap: 3rem;
+    margin: 5px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* DESCRIPCION */
+
+.panel-descripcion {
+    margin: 5px;
+    padding: 10px;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.338);
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+/* IMAGENES */
+
+.panel-imagenes {
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.338);
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+.juego {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 25px;
+    justify-content: center;
+    transition: .3s ease-out;
+    font-size: small;
+    height: 20rem;
+    width: 15rem;
+    border: 2px solid rgb(156, 27, 128);
+}
+
+.imagen-juego {
+    border-radius: 5px;
+    width: 20rem;
+}
+
+/* ICONOS */
+
+.iconos {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 2rem;
+}
+
+.iconos>img{
+    width: 3rem;
+}
+
+/*Footer*/
+
+footer{
+    background-color: rgba(19, 18, 18, 0.816);
+    backdrop-filter: blur(25px);
+    border-top: 2px solid rgb(156, 27, 128);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+footer section{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+footer section h2{
+    position: relative;
+}
+
+footer section h2::before{
+    position: absolute;
+    content: '';
+    background-color: rgb(156, 27, 128);
+    height: 100%;
+    aspect-ratio: 1/2;
+    left: -20px;
+    border-radius: 2px;
+}
+footer section ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5px;
+}
+footer section ul li{
+    text-decoration: none;
+    opacity: 0.5;
+
+}
+ul {
+    list-style-type: circle;
+}
+.links {
+    text-decoration: none;
+    color: white;
+    opacity: 0.9;
+}

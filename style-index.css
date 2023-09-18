@@ -1,0 +1,337 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-image: url(Sources/imagen-fondo.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.main {
+    padding: 1rem;
+}
+
+/*Encabezado*/
+.encabezado-general {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.lista{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+li {
+    list-style: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-logo {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 65px;
+}
+/*Menu hamburguesa*/
+
+.menu-hamburguesa {
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    scale: 1 0;
+    transform-origin: top;
+    width: 300px;
+    backdrop-filter: blur(40px);
+    background-color: rgba(0, 0, 0, 0.423);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    transition: scale 0.2s ease-in;  
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.339);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    
+}
+
+.menu-hamburguesa.open {
+    scale: 1; 
+    transition: scale 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-hamburguesa li {
+    display: flex;
+    padding: 0.7rem;
+}
+
+/*Menu responsive*/
+@media(max-width: 992px) {
+    .encabezado-general .lista,
+    .encabezado-general .action-btn {
+        display: none;
+    }
+
+    .encabezado-general .menu {
+        display: block;
+    }
+}
+
+@media(max-width: 576px) {
+    .menu-hamburguesa {
+        left: 10rem;
+        width: unset;
+    }
+}
+
+/*Barra de busqueda*/
+.busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.338);
+    padding: .5rem;
+    margin-bottom: .5rem;
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+}
+.barra-busqueda {
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.152);
+    text-align: center;
+    color: white;
+    height: 30px;
+    width: 600px;
+    border-radius: 10px;
+    border: none;
+}
+
+/*Favoritos*/
+
+.botonera1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.338);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+    flex-grow: 15;
+    gap: 2rem;
+}
+
+.vaciar-lista {
+    background: none;
+    color: white;
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.boton-añadir{
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.052);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+    #favoritos-img {
+        width: 7rem;
+        height: 2rem;
+    }
+
+    .btn-fav {
+        position: relative;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+    }
+
+    .btn-fav:hover{
+        cursor: pointer;
+    }
+
+    .container-favs-cant {
+        position: absolute;
+        top: 5rem;
+        right: 1rem;
+        backdrop-filter: blur(25px);
+        background-color: rgba(0, 0, 0, 0.338);
+        border: 2px solid rgb(156, 27, 128);
+        border-radius: 10px;
+        min-width: 15rem;
+        scale: 0;
+        transition: scale .3s;
+        transform-origin: right;
+        z-index: 1;
+        min-height: 2rem;
+        padding: 1rem;
+        display: grid;
+        place-items: center;
+    }
+
+    .container-favs-cant.activo{
+        scale: 1;
+    }
+
+    .icon-close {
+        display: flex;
+        height: 20px;
+        width: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .icon-close:hover{
+        cursor: pointer;
+    }
+
+
+    .fav-cant {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1rem;
+    }
+
+    .info-fav-cant {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: .55;
+    }
+
+    .title-fav-menu {
+        display: flex;
+    }
+
+    .cant-fav-menu {
+        display: flex;
+        padding-left: 1rem;
+    }
+
+
+/*Contenidos*/
+.cuerpo-pagina {
+    display: flex;
+}
+
+/*Juegos*/
+
+.panel-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(11rem,1fr));
+    gap: 3rem;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.338);
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(156, 27, 128);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.juegos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 25px;
+    justify-content: center;
+    transition: .3s ease-out;
+    font-size: small;
+    padding-bottom: 1rem;
+}
+
+.juegos:hover{
+    translate: 0 -.5rem;
+    box-shadow: 0 0 .4rem .1rem rgb(156, 27, 128);
+    background-color: #00000030;
+}
+
+
+.imagen-juego {
+    border-radius: 15px;
+    border: 2px solid rgb(156, 27, 128);
+    /* max-height: 300px; */
+    object-fit: cover;
+    width: 100%;
+}
+
+.panel-juegos:has(.juegos:hover) .juegos:not(:hover){
+    filter: opacity(70%) brightness(60%) grayscale(50%);
+}
+
+/* verifica si .panel-juegos TIENE un hijo .juegos que le hacen :hover, entonces al .juegos que NO le hacen :hover le aplica el CSS*/
+
+/*Footer*/
+
+footer{
+    background-color: rgba(19, 18, 18, 0.816);
+    backdrop-filter: blur(25px);
+    border-top: 2px solid rgb(156, 27, 128);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+footer section{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+footer section h2{
+    position: relative;
+}
+
+footer section h2::before{
+    position: absolute;
+    content: '';
+    background-color: rgb(156, 27, 128);
+    height: 100%;
+    aspect-ratio: 1/2;
+    left: -20px;
+    border-radius: 2px;
+}
+footer section ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5px;
+}
+footer section ul li{
+    text-decoration: none;
+    opacity: 0.5;
+
+}
+.links {
+    text-decoration: none;
+    color: white;
+    opacity: 0.9;
+}

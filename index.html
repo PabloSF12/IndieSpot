@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndieSpot</title>
+    <link rel="icon" href="Sources/icono.ico">
+</head>
+    <link rel="stylesheet" href="style-index.css">
+<body>
+    <!--ENCABEZADO-->
+<div class="main">
+    <header>
+        <div class="encabezado-general">
+            <div>
+                <a class="logo" href="index.html">
+                    <img class="imagen-logo" src="Sources/logo_is.png" alt="logo_prinicipal">
+                </a>
+            </div>
+                <ul class="lista">
+                    <li><a href="index.html" class="links">Inicio</a></li>
+                    <li><a href="spiderman.html" class="links">Ultimo lanzamiento</a></li>
+                    <li><a href="login.html" class="links">Perfil</a></li>
+                </ul>
+                    <a href="#" class="action-btn"><button class="btn-fav"><img id="favoritos-img" src="Sources/favoritos.svg" alt=""></button></a>
+            <div class="menu">
+                <img src="Sources/menu.png" alt="menu" class="menu-logo">
+            </div>
+
+            <div class="menu-hamburguesa">
+                <li><a href="index.html" class="links">Inicio</a></li>
+                <li><a href="spiderman.html" class="links">Ultimo lanzamiento</a></li>
+                <li><a href="login.html" class="links">Perfil</a></li>
+            </div>
+        </div>
+    </header>
+
+    <!--BARRA DE BUSQUEDA-->
+
+    <div class="busqueda"> 
+        <form>
+            <input class="barra-busqueda" type="search" name="barra" placeholder="Buscar videojuego">
+        </form>
+    </div>
+
+    <!--CUERPO DE LA PAGINA-->
+
+    <div class="cuerpo-pagina">
+
+        <!--JUEGOS-->
+
+        <div class="panel-juegos">
+                <div class="juegos">
+                    <a class="juegos" href="spiderman.html">
+                    <img class="imagen-juego" src="Sources/juegos/spiderman-juego.webp" alt="spiderman-caratula">
+                    </a>
+                    <h3>Marvel's Spider-Man</h3>
+                    <form class="añadir-fav"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                    
+                </div>
+                <div class="juegos">
+                    <img class="imagen-juego" src="Sources/juegos/gta-v-portada.jfif" alt="spiderman-caratula">
+                    <h3>Grand Theft Auto V</h3>
+                    <form class="añadir-fav"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                </div>
+                <div class="juegos">
+                    <img class="imagen-juego" src="Sources/juegos/gow-2018-portada.webp" alt="spiderman-caratula">
+                    <h3>God of War</h3>
+                    <form class="añadir-fav"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                </div>
+                <div class="juegos">
+                    <img class="imagen-juego" src="Sources/juegos/dark-souls-3-portada.jfif" alt="spiderman-caratula">
+                    <h3>Dark Souls 3</h3>
+                    <form class="añadir-fav"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                </div>
+                <div class="juegos">
+                    <img class="imagen-juego" src="Sources/juegos/minecraft-portada.jpg" alt="spiderman-caratula">
+                    <h3>Minecraft</h3>
+                    <form class="añadir-fav"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                </div>
+                <div class="juegos">
+                    <img class="imagen-juego" src="Sources/juegos/rocket-league-portada.jpg" alt="spiderman-caratula">
+                    <h3>Rocket League</h3>
+                    <form class="añadir-fav"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                </div>
+                <div class="juegos">
+                    <img class="imagen-juego" src="Sources/juegos/re7-portada.jpg" alt="spiderman-caratula">
+                    <h3>Resident Evil 7 Biohazard</h3>
+                    <form class="añadir-fav"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                </div>
+                <div class="juegos">
+                    <img class="imagen-juego" src="Sources/juegos/rdr2-portada.jpg" alt="spiderman-caratula">
+                    <h3>Red Dead Redemption 2</h3>
+                    <form class="añadir-fav"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                </div>
+                <div class="juegos">
+                    <img class="imagen-juego" src="Sources/packjuegos.webp" alt="spiderman-caratula">
+                    <h3>Pack de juegos</h3>
+                    <form class="añadir-varios"><input type="submit" value="Añadir" class="boton-añadir"></form>
+                </div>
+            </div>
+    </div>  
+</div>
+
+<div class="container-favs-cant">
+    <table id="lista"></table>
+    <button id="vaciar" class="vaciar-lista">Vaciar lista</button>
+</div>
+
+
+        <!--FOOTER-->
+        
+        <div>
+            <footer>
+                <section>
+                    <h2>Navegación</h2>
+                    <ul>
+                        <a href="index.html" class="links"><li>Inicio</li></a>
+                        <a href="spiderman.html" class="links"><li>¡Nuevo lanzamiento!</li></a>
+                        <a href="login.html" class="links"><li>Perfil</li></a>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Mas recomendaciones</h2>
+                    <ul>
+                        <a href="https://www.3djuegos.com" class="links"><li>3Djuegos</li></a>
+                        <a href="https://vandal.elespanol.com" class="links"><li>Vandal</li></a>
+                        <a href="https://www.metacritic.com" class="links"><li>Metacritic</li></a>
+                        <a href="https://www.vidaextra.com" class="links"><li>Vida Extra</li></a>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Cuenta</h2>
+                    <ul>
+                        <a href="login.html" class="links"><li>Iniciar sesión</li></a>
+                            <li>Configuración</li>
+                            <li>Desconectar</li>
+                    </ul>
+                </section>
+            </footer>
+        </div>
+        <script src="JavaScript/index.js"></script>
+        <script src="JavaScript/menu.js"></script>
+</body> 
+</html>
